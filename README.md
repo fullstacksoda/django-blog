@@ -5,15 +5,22 @@ To setup the blog, first ensure that you have Python and the latest Django versi
 
 Clone the repo, navigate to the directory then initialise the first migrations with
 
-> python manage.py migrate
+```
+python manage.py migrate
+
+```
 
 Create your user with
 
-> python manage.py createsuperuser
+```
+python manage.py createsuperuser
+```
 
 Then start the server with 
 
-> python manage.py runserver
+```
+python manage.py runserver
+```
 
 navigate to 127.0.0.1:8000/admin and log in. You can see that you will be able to create posts and comments from the dashboard.
 
@@ -21,11 +28,13 @@ navigate to 127.0.0.1:8000/blog to see posts listed and you can visit the post t
 
 If you want to enable the share by email feature, you will need to edit settings.py and replace 
 
-> EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+```python
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+```
 
 with your email details like so:
 
-```
+```python
 EMAIL_HOST = 'your email host smtp'
 EMAIL_HOST_USER = 'your email address'
 EMAIL_HOST_PASSWORD = 'your email password'

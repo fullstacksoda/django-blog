@@ -37,7 +37,7 @@ with your email details like so:
 EMAIL_HOST = 'your email host smtp'
 EMAIL_HOST_USER = 'your email address'
 EMAIL_HOST_PASSWORD = 'your email password'
-EMAIL_PORT = smtp port as int
+EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 ```
 

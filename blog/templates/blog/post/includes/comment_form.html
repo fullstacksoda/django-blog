@@ -1,0 +1,10 @@
+<article>
+    <header>
+        <strong>Add a comment</strong>
+    </header>
+    <form action="{% url 'blog:post_comment' post.id %}" method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Post">
+    </form>
+</article>

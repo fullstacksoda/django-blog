@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <main class="container">
+        <nav>
+            <ul>
+                <li><strong><a href="{% url 'blog:post_list' %}">Home</a></strong></li>
+            </ul>
+        </nav>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Blog - List View{% endblock %}
+
+{% block content %}
+        {% for post in posts %}
+        <article>
+            <header>
+                <h3>
+                    <a href="{{ post.get_absolute_url }}">
+                        {{ post.title }}
+                    </a>
+                </h3>
+            </header>
+            
+            <p>
+                {{ post.body|truncatewords:30|linebreaks }}
+            </p>
+
+        </article>
+        {% endfor %}
+        
+            {% include "blog/pagination.html" with page=page_obj %}
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Blog - Share Post{% endblock %}
+
+{% block content %}
+    {% if sent %}
+    <article>
+        <p>
+            Email successfully sent<br><br><a href="{{ post.get_absolute_url }}">&larr; Go back</a>
+        </p>
+    </article>
+    {% else %}
+    <article>
+        <header>
+            <p>
+                Share "{{ post.title }}" via email
+            </p>
+        </header>
+        <form method="post">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" value="Send">
+        </form>
+    </article>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Blog - Detail View{% endblock %}
+
+{% block content %}
+        <article>
+            <header>
+                <h3>{{ post.title }}</h3>
+                {% with comments.count as total_comments %}
+                <small>{{ total_comments }} comment{{ total_comments|pluralize }}
+                    <br><a href="{% url 'blog:post_share' post.id %}">Share this post</a></small>
+                {% endwith %}
+            </header>
+            <strong>Published {{ post.publish }} by {{ post.author }}</strong><br>{{ post.body|linebreaks }}
+        </article>
+        {% for comment in comments %}
+        <article>
+            <p><strong>{{ comment.name }} @</strong> <small>{{ comment.created }}</small></p>
+            <p>{{ comment.body|linebreaks }}</p>
+        </article>
+        {% empty %}
+        <article>
+            <p>There are no comments on this post yet.</p>
+        </article>
+        {% endfor %}
+        {% include 'blog/post/includes/comment_form.html' %}
+{% endblock %}

@@ -19,7 +19,9 @@ navigate to 127.0.0.1:8000/admin and log in. You can see that you will be able t
 
 navigate to 127.0.0.1:8000/blog to see posts listed and you can visit the post to add/view comments
 
-If you want to enable the share by email feature, you will need to edit settings.py and replace > EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' with your email details like so:
+If you want to enable the share by email feature, you will need to edit settings.py and replace 
+> EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
+with your email details like so:
 
 ```
 EMAIL_HOST = 'your email host smtp'

@@ -7,7 +7,6 @@ Clone the repo, navigate to the directory then initialise the first migrations w
 
 ```
 python manage.py migrate
-
 ```
 
 Create your user with

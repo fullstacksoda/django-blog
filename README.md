@@ -19,4 +19,4 @@ navigate to 127.0.0.1:8000/admin and log in. You can see that you will be able t
 
 navigate to 127.0.0.1:8000/blog to see posts listed and you can visit the post to add/view comments
 
-[Example blog](https://raw.githubusercontent.com/fullstacksoda/django-blog/main/Screenshot%20from%202023-01-05%2013-27-02.png)
+![Example blog](https://raw.githubusercontent.com/fullstacksoda/django-blog/main/Screenshot%20from%202023-01-05%2013-27-02.png)
